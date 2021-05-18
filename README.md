@@ -81,10 +81,8 @@ handleKeyup (event) {
 ````
 
 2. 拖动选框
-   ![示例](docs/img.png)
-   
-3. 完成选框
-得到坐标
+   ![示例](docs/img.jpg)
+
 
 
 
