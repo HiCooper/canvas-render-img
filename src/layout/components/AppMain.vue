@@ -1,7 +1,7 @@
 <template>
   <section class="app-main">
     <transition name="fade" mode="out-in">
-      <router-view />
+      <router-view/>
     </transition>
   </section>
 </template>
@@ -12,8 +12,8 @@ export default {
 }
 </script>
 <style scoped lang="scss">
- .app-main {
-   position: relative;
-   height: 100%;
- }
+.app-main {
+  position: relative;
+  height: 100%;
+}
 </style>

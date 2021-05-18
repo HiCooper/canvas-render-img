@@ -7,7 +7,6 @@ import 'normalize.css/normalize.css'
 import './plugins/element.js'
 import './styles/index.scss'
 
-
 Vue.config.productionTip = false
 
 new Vue({

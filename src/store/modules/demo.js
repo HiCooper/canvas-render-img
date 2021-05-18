@@ -4,14 +4,14 @@ const demo = {
   },
   mutations: {
     INCREMENT: (state, val) => {
-      state.count = val;
+      state.count = val
     }
   },
   actions: {
-    incrementCount({commit}, val) {
+    incrementCount ({ commit }, val) {
       commit('INCREMENT', val)
     }
   }
-};
+}
 
 export default demo

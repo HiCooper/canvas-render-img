@@ -1,4 +1,4 @@
-# vue-cli3-template
+# canvas-render-img
 > use element-ui
 
 ## Project setup

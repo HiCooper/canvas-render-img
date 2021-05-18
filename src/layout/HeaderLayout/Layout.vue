@@ -1,8 +1,8 @@
 <template>
-  <div class="app-wrapper" >
+  <div class="app-wrapper">
     <div class="main-container">
-      <nav-bar />
-      <app-main />
+      <nav-bar/>
+      <app-main/>
     </div>
   </div>
 </template>
@@ -24,6 +24,7 @@ export default {
   position: relative;
   height: 100%;
   width: 100%;
+
   &:after {
     content: "";
     display: table;

@@ -1,4 +1,4 @@
 const getters = {
-  count: state => state.demo.count,
-};
+  count: state => state.demo.count
+}
 export default getters
