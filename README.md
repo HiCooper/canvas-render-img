@@ -10,6 +10,7 @@
 > /src/views/sample/RenderImg.vue
 
 #### 1. 绘制图片和矩形选框
+
 1. 定义 canvas 元素
 
 ````html
@@ -38,7 +39,18 @@ renderNormalImg () {
 
 #### 2. 截图选框
 > 先如上绘制图片
-1. 开启选框
+1. 定义截图 canvas 显示元素
+
+````html
+<canvas id="cut-img-canvas-id"/>
+
+// 选框结束后渲染截图
+renderCutImg () {
+    drawCutImg('cut-img-canvas-id', sampleImgUrl, this.coordinate, 600)
+},
+````
+
+2. 开启选框, 定义相关函数
 ````html
 // 开始自定义选框
 startSelect () {
@@ -53,32 +65,31 @@ startSelect () {
     this.activeDrawRect = true
   }
 },
-````
-````html
 // 退出自定义选框
 cancelSelect () {
-  if (this.canvasBox) {
-    this.canvasBox.unRegisterListener()
-    window.removeEventListener('keyup', this.handleKeyup)
-  }
-  this.activeDrawRect = false
+   if (this.canvasBox) {
+   this.canvasBox.unRegisterListener()
+   window.removeEventListener('keyup', this.handleKeyup)
+   }
+   this.activeDrawRect = false
 },
 // 选框完成回调
 selectRectDone (selectPosition, zoom) {
-  const x1 = (selectPosition.x / zoom)
-  const y1 = (selectPosition.y / zoom)
-  const x2 = ((selectPosition.x + selectPosition.w) / zoom)
-  const y2 = ((selectPosition.y + selectPosition.h) / zoom)
-  this.coordinate = String([[[y1, x1], [y2, x2]]])
-  console.log(this.coordinate)
+   const x1 = (selectPosition.x / zoom)
+   const y1 = (selectPosition.y / zoom)
+   const x2 = ((selectPosition.x + selectPosition.w) / zoom)
+   const y2 = ((selectPosition.y + selectPosition.h) / zoom)
+   this.coordinate = [[y1, x1], [y2, x2]]
+   this.renderCutImg()
 },
 // 键盘 esc 监听事件
 handleKeyup (event) {
-  if (isHotkey('esc', event)) {
+   if (isHotkey('esc', event)) {
     this.cancelSelect()
-  }
+   }
 }
 ````
+
 
 2. 拖动选框
    ![示例](docs/img.jpg)

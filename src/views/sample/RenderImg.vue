@@ -82,7 +82,6 @@ export default {
       const x2 = ((selectPosition.x + selectPosition.w) / zoom)
       const y2 = ((selectPosition.y + selectPosition.h) / zoom)
       this.coordinate = [[y1, x1], [y2, x2]]
-      // console.log(this.coordinate)
       this.renderCutImg()
     },
     handleKeyup (event) {
