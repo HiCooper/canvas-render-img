@@ -5,6 +5,7 @@
 ## 关键函数
 - canvas.js
 - canvasUtil.js
+- canvasCutImg.js
 
 ## 使用示例
 > /src/views/sample/RenderImg.vue
