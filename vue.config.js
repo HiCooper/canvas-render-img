@@ -1,7 +1,7 @@
 module.exports = {
   lintOnSave: false,
   assetsDir: 'static',
-  publicPath: 'canvas-render-img',
+  publicPath: './',
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
