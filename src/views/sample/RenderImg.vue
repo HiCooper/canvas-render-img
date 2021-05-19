@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import { CanvasBox } from '@/utils/canvas'
-import { drawCutImg } from '@/utils/canvasCutImg'
+import { CanvasBox, drawCutImg } from '@/utils/canvas'
 import { isHotkey } from 'is-hotkey'
 
 const sampleImgUrl = 'https://www.hicooper.cn:8077/ajax/bucket/file/master/IMG/邓紫棋.jpg'
