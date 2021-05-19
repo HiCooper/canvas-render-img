@@ -1,6 +1,7 @@
 # canvas-render-img
 > sample use element-ui
 
+[Online Demo](https://hicooper.github.io/canvas-render-img)
 
 ## 关键函数
 - canvas.js
